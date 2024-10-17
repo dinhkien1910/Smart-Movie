@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HeaderCell" reuseIdentifier="HeaderHomeViewCell" id="U6b-Vx-4bR" customClass="HeaderHomeViewCell" customModule="SmartMovie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="341" height="67"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQW-xY-4uy">
+                    <rect key="frame" x="0.0" y="0.0" width="341" height="33"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGQ-aK-37Z">
+                            <rect key="frame" x="16" y="6" width="62" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHk-1O-V7Y">
+                            <rect key="frame" x="245" y="-0.66666666666666785" width="80" height="34.333333333333343"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="See All">
+                                <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="invokeSeeAll:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="RCH-Ht-0lY"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="kHk-1O-V7Y" firstAttribute="centerY" secondItem="xGQ-aK-37Z" secondAttribute="centerY" id="5uJ-gE-K0E"/>
+                        <constraint firstItem="xGQ-aK-37Z" firstAttribute="centerY" secondItem="RQW-xY-4uy" secondAttribute="centerY" id="CHl-02-thi"/>
+                        <constraint firstAttribute="trailing" secondItem="kHk-1O-V7Y" secondAttribute="trailing" constant="16" id="LX6-Cm-FiF"/>
+                        <constraint firstItem="xGQ-aK-37Z" firstAttribute="leading" secondItem="RQW-xY-4uy" secondAttribute="leading" constant="16" id="NYx-xm-iel"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="RQW-xY-4uy" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="B8Z-Qq-syd"/>
+                <constraint firstAttribute="trailing" secondItem="RQW-xY-4uy" secondAttribute="trailing" id="X0x-Ad-pUy"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="RQW-xY-4uy" secondAttribute="bottom" id="e9D-0v-mN8"/>
+                <constraint firstItem="RQW-xY-4uy" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="fvx-hO-xyA"/>
+            </constraints>
+            <connections>
+                <outlet property="btnSeeAll" destination="kHk-1O-V7Y" id="H3M-5b-BBl"/>
+                <outlet property="containView" destination="RQW-xY-4uy" id="KhV-Gu-uFt"/>
+                <outlet property="sectionLabel" destination="xGQ-aK-37Z" id="mzo-lw-TyI"/>
+            </connections>
+            <point key="canvasLocation" x="125.95419847328243" y="26.408450704225352"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
